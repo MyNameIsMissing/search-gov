@@ -2,6 +2,9 @@ default: &DEFAULT
   options:
     open_timeout: 1
     timeout: 3
+    ssl:
+      ca_file: '/etc/logstash/certs/elasticsearch-ca.pem'
+      verify: false
 
 azure_default: &AZURE_DEFAULT
   <<: *DEFAULT
