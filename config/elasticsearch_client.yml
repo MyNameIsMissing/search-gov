@@ -6,7 +6,6 @@ default: &DEFAULT
   reload_on_failure: true
   retry_on_failure: 1
   transport_options:
-    ca_file: '/etc/logstash/certs/elasticsearch-ca.pem'
     ssl:
       verify: false
 
