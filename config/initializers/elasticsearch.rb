@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 
 config = {
-    transport_options: { ssl: { verify: false } }
+    transport_options: { 
+        ssl: { 
+            verify: false,
+            ca_file: "/etc/logstash/certs/elasticsearch-ca.pem"
+        } 
+    }
   }
   
   if File.exist?('config/elasticsearch_client.yml')
